@@ -1,42 +1,164 @@
-#root {
-  max-width: 1280px;
+/* Header container */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, nav right */
+  padding: 0 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Logo image */
+.header img {
+  max-height: 50px;   /* limit logo height */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Navigation wrapper */
+/* .nav {
+  display: flex;
+  align-items: center;
+} */
+
+/* Navigation list */
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav items */
+.nav-list li {
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-list li:hover {
+  color: #007bff;
+}
+
+/* Login button */
+.header-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-left: 25px;
+}
+
+.header-button:hover {
+  background: #0056b3;
+}
+
+/* App.css or ProductCards.css */
+
+/* Body and header styling remain the same */
+/* App.css */
+
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Main container (just for vertical spacing) */
+.main-container {
+  padding-top: 120px;
+}
+
+/* **New container** to center content */
+.content-wrapper {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 0 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Search bar styling */
+.product-search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.products-search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.product-search-container input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 400px; /* Increased the width */
+  font-size: 16px;
 }
 
+.product-search-container button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff; /* Changed button color to a standard blue */
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Product grid styling */
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  grid-auto-rows: minmax(450px, auto);
+}
+
+/* Product card styling */
 .card {
-  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  background: #fff;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
-.read-the-docs {
-  color: #888;
+.card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
 }
